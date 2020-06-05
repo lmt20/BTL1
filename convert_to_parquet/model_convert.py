@@ -54,7 +54,7 @@ def convert_parquet(memory, warehouse, path_input, name_path_output):
 
 
 memory = "4g"
-warehouse = "/home/lmtruong1512/Codes/BTL_CSDLDPT/feature_parquet"
-path_input = "/home/lmtruong1512/Codes/BTL_CSDLDPT/extracted_files/extracted_SIFT"
-name_path_output = "sift_parquet"
+warehouse = "/home/lmtruong1512/codes/BTL1/feature_parquet"
+path_input = "/home/lmtruong1512/codes/BTL1/extracted_files/extracted_SIFT100"
+name_path_output = "sift_parquet100"
 convert_parquet(memory, warehouse, path_input, name_path_output)

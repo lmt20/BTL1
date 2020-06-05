@@ -1,9 +1,12 @@
 import shutil
 import os
 
-//copy dataraw to one folder
-src = '/home/lmtruong1512/Pictures/Data/animals'
+# copy dataraw to one folder
+src = '/home/lmtruong1512/Pictures/Data/animals10/raw-img'
 dst = '/home/lmtruong1512/Pictures/Data/collapsed_animals'
+
+if(not os.path.isdir(dst)):
+    os.mkdir(dst)
 with os.scandir(src) as animals:
     for species in animals:
         count = 0

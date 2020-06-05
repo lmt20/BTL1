@@ -1,18 +1,14 @@
-
-
 from sklearn.neighbors import KNeighborsClassifier
 import cv2 as cv
 import numpy as np
 import os
 import sys
 
-import sift_extraction
-# import time
-
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from feature_extraction import sift_extraction
 
 
-class Extract_BoW:
+class extract_bow:
     def __init__(self, centroids, extractor):
         self.centroids = centroids
         self.extractor = extractor
@@ -40,10 +36,10 @@ class Extract_BoW:
 
 
 centroids = np.load(
-    "/home/lmtruong1512/Codes/BTL_CSDLDPT/centroid_files/sift100_centroids128.npy")
+    "/home/lmtruong1512/codes/BTL1/centroid_files/sift100_centroids128.npy")
 extractor = sift_extraction.sift_extraction()
 img = cv.imread(
-    "/home/lmtruong1512/Codes/BTL_CSDLDPT/image_data/animals_test/OIF-e2bexWrojgtQnAPPcUfOWQ.jpeg")
-extract_BoW = Extract_BoW(centroids, extractor)
+    "/home/lmtruong1512/codes/BTL1/image_data/animals_test/OIF-e2bexWrojgtQnAPPcUfOWQ.jpeg")
+extract_BoW = extract_bow(centroids, extractor)
 arr_bow = extract_BoW.extract(img)
-print(arr_bow)
+# print(arr_bow.shape)

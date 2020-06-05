@@ -54,7 +54,7 @@ def run(input_images_path, output_des_path, limit_nbest_keypoints=0):
 
 
 # input_images_path = "/home/lmtruong1512/Pictures/Data/collapsed_animals"
-# output_des_path = "/home/lmtruong1512/Codes/BTL_CSDLDPT/extracted_files/extracted_SIFT100"
+# output_des_path = "/home/lmtruong1512/codes/BTL1/extracted_files/extracted_SIFT100"
 # # clear ouput_des_path
 # if os.path.isdir(output_des_path):
 #     shutil.rmtree(output_des_path)
@@ -71,7 +71,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('images_path')
     parser.add_argument('descriptions_path')
-    parser.add_argument('limit_nbest_keypoints', type=int)
+    parser.add_argument('limit_nbest_keypoints', type=int,
+                        default=0)
     options = parser.parse_args()
     print(options)
     if options.limit_nbest_keypoints:
@@ -79,3 +80,4 @@ if __name__ == '__main__':
             options.limit_nbest_keypoints)
     else:
         run(options.images_path, options.descriptions_path)
+# /usr/bin/python3 /home/lmtruong1512/codes/BTL1/feature_extraction/sift_extraction.py /home/lmtruong1512/Pictures/Data/collapsed_animals /home/lmtruong1512/codes/BTL1/extracted_files/extracted_SIFT100 100

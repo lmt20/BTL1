@@ -70,4 +70,4 @@ if __name__ == '__main__':
 # ncluster = 128
 # cal_centers(memory, warehouse, name_path_parquet, path_centroidfile, ncluster)
 
-# python3 /home/lmtruong1512/Codes/BTL_CSDLDPT/find_centroids/find_centroids.py 4g /home/lmtruong1512/Codes/BTL_CSDLDPT/feature_parquet  sift_parquet /home/lmtruong1512/Codes/BTL_CSDLDPT/centroid_files/sift_centroids128 128
+# python3 /home/lmtruong1512/codes/BTL1/find_centroids/find_centroids.py 4g /home/lmtruong1512/codes/BTL1/feature_parquet  sift100_parquet /home/lmtruong1512/codes/BTL1/centroid_files/sift100_centroids128 128
